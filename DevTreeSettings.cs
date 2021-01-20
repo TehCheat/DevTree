@@ -16,7 +16,7 @@ namespace DevTree
             NearestEntsRange = new RangeNode<int>(300, 1, 2000);
             LimitEntriesDrawn = new ToggleNode(true);
             EntriesDrawLimit = new RangeNode<int>(500, 1, 5000);
-            Enable = new ToggleNode(true);
+            Enable = new ToggleNode(false);
             LimitForCollection = new RangeNode<int>(500, 2, 5000);
         }
 
