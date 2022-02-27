@@ -30,7 +30,6 @@ namespace DevTree
         private int _version;
         private TimeCache<Color> ColorSwaper;
         private List<Entity> DebugEntities = new List<Entity>(128);
-        private double Error = 0;
         private readonly Dictionary<string, MethodInfo> genericMethodCache = new Dictionary<string, MethodInfo>();
         private MethodInfo GetComponentMethod;
         private readonly HashSet<string> IgnoredPropertioes = new HashSet<string> {"M", "TheGame", "Address"};
@@ -70,8 +69,6 @@ namespace DevTree
             ColorSwaper = new TimeCache<Color>(() =>
             {
                 return Color.Yellow;
-                return new Color(_rnd.Next(255), _rnd.Next(255), _rnd.Next(255), 255);
-                ;
             }, 25);
 
             Input.RegisterKey(Settings.ToggleWindowKey);
